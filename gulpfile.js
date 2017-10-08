@@ -4,14 +4,14 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
-var rename = require("gulp-rename");
+const rename = require("gulp-rename");
 
 
 /* -------- Server  -------- */
 gulp.task('server', function() {
   browserSync.init({
     server: {
-      port: 9000,
+      port: 4000,
       baseDir: "build"
     }
   });
@@ -21,7 +21,7 @@ gulp.task('server', function() {
 
 
 /* ------------ Styles compile ------------- */
- 
+
 gulp.task('styles:compile', function () {
   return gulp.src('source/styles/main.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -35,7 +35,7 @@ gulp.task('styles:compile', function () {
 gulp.task('templates:compile', function buildHTML() {
   return gulp.src('source/template/index.pug')
   .pipe(pug({
-	pretty: true 
+	pretty: true
   }))
   .pipe(gulp.dest('build'))
 });
@@ -94,10 +94,3 @@ gulp.task('default', gulp.series('clean',
   gulp.parallel('watch', 'server')
   )
 );
-
-
-
-
-
-
-
