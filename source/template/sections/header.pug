@@ -1,18 +1,16 @@
 header.header
     .header__top
         .container
-            .contacts
-                a.contact(href="tel:+380999659909")
-                    i.fa.fa-phone(aria-hidden="true")
-                    span.contact__text +38 099 965 99 09
-                
-                a.contact(hraf="mailto:amonglink@gmail.com")
-                    i.fa.fa-envelope(aria-hidden="true")
-                    span.contact__text amonglink@gmail.com
-                
-                a.facebook-icon(href="facebook.com" target="_blank")
-                    i.fa.fa-facebook-square(aria-hidden="true")
+            include contact
     
     .container            
         .header__bottom
             .logo: img.logo__picture(src="images/logo.png" alt="logo")
+            include nav
+            a.button.header__button.button--red(href="#") Free consultation
+                    
+                    
+                    
+                    
+                    
+                    
