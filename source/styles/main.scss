@@ -7,7 +7,12 @@
 @import "global/common";
 @import "global/sprite";
 @import "global/button";
+@import "global/mixins";
+@import "global/icons";
 
+
+@import "sections/title";
 @import "sections/header";
 @import "sections/nav";
 @import "sections/hero";
+@import "sections/about";
