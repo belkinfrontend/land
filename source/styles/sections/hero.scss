@@ -3,17 +3,25 @@
     padding: 174px 0;
     text-align: center;
     color: #fff;
-    background: #ccc url('../images/hero-bg.jpg') center/cover no-repeat;
+    background: #ccc url('../images/hero-bg.jpeg') center/cover no-repeat;
 
     &__about {
         font-family: $ff-main-bold;
-        font-size: 3rem;
+        font-size: 4rem;
         line-height: 1;
+
+        @media (max-width: 900px) {
+            font-size: 3rem;
+        }
     }
     &__title {
         margin-top: 0;
         margin-bottom: 27px;
         font-family: $ff-main-light;
+
+        @media (max-width: 900px) {
+            font-size: 1.5rem;
+        }
     }
     .button--text--uppercase {
         padding: 21px 35px;
